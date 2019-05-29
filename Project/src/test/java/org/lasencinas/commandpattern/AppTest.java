@@ -85,24 +85,24 @@ public class AppTest {
                 (PedidoPeligroso) pedidoConPeligro);
         assertTrue(tratamientoOK.tratar());
     }
-//
-//    /**
-//     * Añade a las clases PedidoInternacional y PedidoPeligrosoOrden
-//     * una identificador Id de tipo String
-//     * autogenerado haciendo uso de la clase UUID de Java
-//     * https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html
-//     */
-//    @Test
-//    public void test_UUID_generator() {
-//
-//        PedidoInternacional internacional = new PedidoInternacional("Mordor", 10);
-//        PedidoPeligrosoOrden peligroso = new PedidoPeligrosoOrden("Cima de los vientos",
-//                "no limpiarse las uñas con este puñal");
-//        assertNotNull(internacional.getId());
-//        assertNotNull(peligroso.getId());
-//
-//        assertTrue(internacional.getId() != peligroso.getId());
-//    }
+
+    /**
+     * Añade a las clases PedidoInternacional y PedidoPeligrosoOrden
+     * una identificador Id de tipo String
+     * autogenerado haciendo uso de la clase UUID de Java
+     * https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html
+     */
+    @Test
+    public void test_UUID_generator() {
+
+        PedidoInternacional internacional = new PedidoInternacional("Mordor", 10);
+        PedidoPeligrosoOrden peligroso = new PedidoPeligrosoOrden("Cima de los vientos",
+                "no limpiarse las uñas con este puñal");
+        assertNotNull(internacional.getId());
+        assertNotNull(peligroso.getId());
+
+        assertTrue(internacional.getId() != peligroso.getId());
+    }
 //
 //    /**
 //     * Añade una clase para los pedidos nacionales.
