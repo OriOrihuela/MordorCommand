@@ -1,4 +1,10 @@
-package org.lasencinas;
+package org.lasencinas.commandpattern;
+
+import org.lasencinas.commandpattern.pedido.interfaces.Pedido;
+import org.lasencinas.commandpattern.pedido.interfaces.PedidoPeligroso;
+import org.lasencinas.commandpattern.pedido.interfaces.TratamientoPedido;
+import org.lasencinas.commandpattern.pedido.tiposPedido.PedidoInternacional;
+import org.lasencinas.commandpattern.procesador.tiposProcesador.Oficina;
 
 /**
  * Crea una oficina que procesa pedidos.
