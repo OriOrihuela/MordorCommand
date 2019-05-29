@@ -20,11 +20,11 @@ public class PedidoInternacional implements Pedido {
     /* ---- MAIN BEHAVIOURS ---- */
     @Override
     public int peso() {
-        return 0;
+        return peso;
     }
 
     @Override
     public String destino() {
-        return null;
+        return destino;
     }
 }
