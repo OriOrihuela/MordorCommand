@@ -5,6 +5,7 @@ import org.lasencinas.commandpattern.pedido.interfaces.Pedido;
 import org.lasencinas.commandpattern.pedido.interfaces.PedidoPeligroso;
 import org.lasencinas.commandpattern.pedido.interfaces.TratamientoPedido;
 import org.lasencinas.commandpattern.pedido.tiposPedido.PedidoInternacional;
+import org.lasencinas.commandpattern.pedido.tiposPedido.PedidoNacional;
 import org.lasencinas.commandpattern.pedido.tiposPedido.PedidoPeligrosoOrden;
 import org.lasencinas.commandpattern.pedido.tiposTratamiento.TratamientoPedidoInternacional;
 import org.lasencinas.commandpattern.pedido.tiposTratamiento.TratamientoPedidoPeligroso;
@@ -103,20 +104,20 @@ public class AppTest {
 
         assertTrue(internacional.getId() != peligroso.getId());
     }
-//
-//    /**
-//     * Añade una clase para los pedidos nacionales.
-//     */
-//
-//    @Test
-//    public void test_pedido_nacional_UUDI() {
-//
-//        PedidoInternacional internacional = new PedidoInternacional("Mordor", 10);
-//        assertNotNull(internacional);
-//        PedidoNacional nacional = new PedidoNacional("Gondor", 50);
-//        assertNotNull(nacional);
-//        assertTrue(internacional.getId() != nacional.getId());
-//    }
+
+    /**
+     * Añade una clase para los pedidos nacionales.
+     */
+
+    @Test
+    public void test_pedido_nacional_UUDI() {
+
+        PedidoInternacional internacional = new PedidoInternacional("Mordor", 10);
+        assertNotNull(internacional);
+        PedidoNacional nacional = new PedidoNacional("Gondor", 50);
+        assertNotNull(nacional);
+        assertTrue(internacional.getId() != nacional.getId());
+    }
 //
 //    /**
 //     * Construye una oficina que procese cualquier tipo de pedidos.
