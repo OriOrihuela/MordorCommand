@@ -144,35 +144,35 @@ public class AppTest {
         assertTrue(correos.procesa(pedidoConPeligro));
     }
 //
-//    /**
-//     * La oficina puede enviar un mensaje que informe del
-//     * status del pedido, en funcion de si ha sido posible procesarlo.
-//     * <p>
-//     * Hace uso de un tipo enumerado STATUS con las constantes
-//     * ACEPTADO y RECHAZADO.
-//     */
-//
-//    @Test
-//    public void test_printar_status() {
-//
-//        Oficina correos = new Oficina();
-//        PedidoInternacional toComarcaWithLove = new PedidoInternacional("Comarca", 100);
-//        TratamientoPedido pedidoInt = new TratamientoPedidoInternacional(toComarcaWithLove);
-//
-//        assertTrue(correos.procesa(pedidoInt));
-//        assertEquals("Comarca ACEPTADO", correos.printarStatus(
-//                correos.procesa(pedidoInt), toComarcaWithLove));
-//
-//        PedidoPeligroso pedidoConPeligro = new PedidoPeligrosoOrden("Monte del destino",
-//                "no ponerselo en el dedo");
-//        TratamientoPedido tratamientoKO = new TratamientoPedidoPeligroso(pedidoConPeligro);
-//
-//        assertFalse(correos.procesa(tratamientoKO));
-//        assertEquals("Monte del destino RECHAZADO", correos.printarStatus(
-//                correos.procesa(tratamientoKO),
-//                pedidoConPeligro));
-//
-//    }
+    /**
+     * La oficina puede enviar un mensaje que informe del
+     * status del pedido, en funcion de si ha sido posible procesarlo.
+     * <p>
+     * Hace uso de un tipo enumerado STATUS con las constantes
+     * ACEPTADO y RECHAZADO.
+     */
+
+    @Test
+    public void test_printar_status() {
+
+        Oficina correos = new Oficina();
+        PedidoInternacional toComarcaWithLove = new PedidoInternacional("Comarca", 100);
+        TratamientoPedido pedidoInt = new TratamientoPedidoInternacional(toComarcaWithLove);
+
+        assertTrue(correos.procesa(pedidoInt));
+        assertEquals("Comarca ACEPTADO", correos.printarStatus(
+                correos.procesa(pedidoInt), toComarcaWithLove));
+
+        PedidoPeligroso pedidoConPeligro = new PedidoPeligrosoOrden("Monte del destino",
+                "no ponerselo en el dedo");
+        TratamientoPedido tratamientoKO = new TratamientoPedidoPeligroso(pedidoConPeligro);
+
+        assertFalse(correos.procesa(tratamientoKO));
+        assertEquals("Monte del destino RECHAZADO", correos.printarStatus(
+                correos.procesa(tratamientoKO),
+                pedidoConPeligro));
+
+    }
 //
 //    /**
 //     * Crea una clase TratamientoPedidoMultiple que permita tratar
