@@ -1,4 +1,6 @@
-package org.lasencinas.procesador.interfaces;
+package org.lasencinas.commandpattern.procesador.interfaces;
+
+import org.lasencinas.commandpattern.pedido.interfaces.TratamientoPedido;
 
 /**
  * La interfaz procesador implementa el metodo:
@@ -15,4 +17,5 @@ public interface Procesador {
 
     /* ---- MAIN BEHAVIOURS ---- */
     public boolean procesa(TratamientoPedido pedido);
+
 }

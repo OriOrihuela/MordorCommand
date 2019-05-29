@@ -1,4 +1,4 @@
-package org.lasencinas.pedido.interfaces;
+package org.lasencinas.commandpattern.pedido.interfaces;
 
 /**
  * La interfaz TratamientoPedido implementa el metodo
