@@ -2,9 +2,12 @@ package org.lasencinas.commandpattern;
 
 import org.junit.Test;
 import org.lasencinas.commandpattern.pedido.interfaces.Pedido;
+import org.lasencinas.commandpattern.pedido.interfaces.PedidoPeligroso;
 import org.lasencinas.commandpattern.pedido.interfaces.TratamientoPedido;
 import org.lasencinas.commandpattern.pedido.tiposPedido.PedidoInternacional;
+import org.lasencinas.commandpattern.pedido.tiposPedido.PedidoPeligrosoOrden;
 import org.lasencinas.commandpattern.pedido.tiposTratamiento.TratamientoPedidoInternacional;
+import org.lasencinas.commandpattern.pedido.tiposTratamiento.TratamientoPedidoPeligroso;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.*;
@@ -58,30 +61,30 @@ public class AppTest {
      * Crea las clases necesarias que se requieren en los casos test
      * respetando los constructores que se exigen.
      */
-//    @Test
-//    public void test_pedido_peligroso_KO() {
-//
-//        Pedido pedidoConPeligro = new PedidoPeligrosoOrden("Monte del destino",
-//                "no ponerselo en el dedo");
-//        assertEquals("Monte del destino", pedidoConPeligro.destino());
-//
-//        TratamientoPedido tratamientoKO = new TratamientoPedidoPeligroso(
-//                (PedidoPeligroso) pedidoConPeligro);
-//        assertNotNull(tratamientoKO);
-//        assertFalse(tratamientoKO.tratar());
-//    }
-//
-//    @Test
-//    public void test_pedido_peligroso_OK() {
-//
-//        Pedido pedidoConPeligro = new PedidoPeligrosoOrden("Cima de los vientos",
-//                "no limpiarse las uñas con este puñal");
-//        assertEquals("Cima de los vientos", pedidoConPeligro.destino());
-//
-//        TratamientoPedido tratamientoOK = new TratamientoPedidoPeligroso(
-//                (PedidoPeligroso) pedidoConPeligro);
-//        assertTrue(tratamientoOK.tratar());
-//    }
+    @Test
+    public void test_pedido_peligroso_KO() {
+
+        Pedido pedidoConPeligro = new PedidoPeligrosoOrden("Monte del destino",
+                "no ponerselo en el dedo");
+        assertEquals("Monte del destino", pedidoConPeligro.destino());
+
+        TratamientoPedido tratamientoKO = new TratamientoPedidoPeligroso(
+                (PedidoPeligroso) pedidoConPeligro);
+        assertNotNull(tratamientoKO);
+        assertFalse(tratamientoKO.tratar());
+    }
+
+    @Test
+    public void test_pedido_peligroso_OK() {
+
+        Pedido pedidoConPeligro = new PedidoPeligrosoOrden("Cima de los vientos",
+                "no limpiarse las uñas con este puñal");
+        assertEquals("Cima de los vientos", pedidoConPeligro.destino());
+
+        TratamientoPedido tratamientoOK = new TratamientoPedidoPeligroso(
+                (PedidoPeligroso) pedidoConPeligro);
+        assertTrue(tratamientoOK.tratar());
+    }
 //
 //    /**
 //     * Añade a las clases PedidoInternacional y PedidoPeligrosoOrden
