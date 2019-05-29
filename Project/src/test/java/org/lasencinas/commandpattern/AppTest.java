@@ -9,6 +9,8 @@ import org.lasencinas.commandpattern.pedido.tiposPedido.PedidoNacional;
 import org.lasencinas.commandpattern.pedido.tiposPedido.PedidoPeligrosoOrden;
 import org.lasencinas.commandpattern.pedido.tiposTratamiento.TratamientoPedidoInternacional;
 import org.lasencinas.commandpattern.pedido.tiposTratamiento.TratamientoPedidoPeligroso;
+import org.lasencinas.commandpattern.procesador.interfaces.Procesador;
+import org.lasencinas.commandpattern.procesador.tiposProcesador.Oficina;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.*;
@@ -118,29 +120,29 @@ public class AppTest {
         assertNotNull(nacional);
         assertTrue(internacional.getId() != nacional.getId());
     }
-//
-//    /**
-//     * Construye una oficina que procese cualquier tipo de pedidos.
-//     * <p>
-//     * La oficina procesa los pedidos en funcion de si
-//     * es posible tratarlos o no segun las reglas de cada
-//     * tipo de pedido
-//     */
-//
-//    @Test
-//    public void test_interface_procesador() {
-//
-//        Procesador correos = new Oficina();
-//        TratamientoPedido pedidoInt = new TratamientoPedidoInternacional(
-//                new PedidoInternacional("Comarca", 100));
-//        assertTrue(correos.procesa(pedidoInt));
-//
-//        TratamientoPedido pedidoConPeligro = new TratamientoPedidoPeligroso(
-//                new PedidoPeligrosoOrden(
-//                        "Cima de los vientos",
-//                        "no limpiarse las uñas con este puñal"));
-//        assertTrue(correos.procesa(pedidoConPeligro));
-//    }
+
+    /**
+     * Construye una oficina que procese cualquier tipo de pedidos.
+     * <p>
+     * La oficina procesa los pedidos en funcion de si
+     * es posible tratarlos o no segun las reglas de cada
+     * tipo de pedido
+     */
+
+    @Test
+    public void test_interface_procesador() {
+
+        Procesador correos = new Oficina();
+        TratamientoPedido pedidoInt = new TratamientoPedidoInternacional(
+                new PedidoInternacional("Comarca", 100));
+        assertTrue(correos.procesa(pedidoInt));
+
+        TratamientoPedido pedidoConPeligro = new TratamientoPedidoPeligroso(
+                new PedidoPeligrosoOrden(
+                        "Cima de los vientos",
+                        "no limpiarse las uñas con este puñal"));
+        assertTrue(correos.procesa(pedidoConPeligro));
+    }
 //
 //    /**
 //     * La oficina puede enviar un mensaje que informe del

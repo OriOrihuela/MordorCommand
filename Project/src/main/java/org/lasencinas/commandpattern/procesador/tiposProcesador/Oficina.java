@@ -14,6 +14,9 @@ public class Oficina implements Procesador {
     /* ---- MAIN BEHAVIOURS ---- */
     @Override
     public boolean procesa(TratamientoPedido pedido) {
+        if (pedido.tratar()) {
+            return true;
+        }
         return false;
     }
 }
