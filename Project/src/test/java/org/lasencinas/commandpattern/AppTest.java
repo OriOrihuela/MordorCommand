@@ -150,6 +150,7 @@ public class AppTest {
         assertTrue(correos.procesa(pedidoConPeligro));
     }
 //
+
     /**
      * La oficina puede enviar un mensaje que informe del
      * status del pedido, en funcion de si ha sido posible procesarlo.
@@ -180,6 +181,7 @@ public class AppTest {
 
     }
 //
+
     /**
      * Crea una clase TratamientoPedidoMultiple que permita tratar
      * pedidos multiples.

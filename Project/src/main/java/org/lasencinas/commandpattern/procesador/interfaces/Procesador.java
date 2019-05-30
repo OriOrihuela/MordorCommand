@@ -4,7 +4,7 @@ import org.lasencinas.commandpattern.pedido.interfaces.TratamientoPedido;
 
 /**
  * La interfaz procesador implementa el metodo:
-
+ * <p>
  * recibe
  *
  * @param TratamientoPedido
