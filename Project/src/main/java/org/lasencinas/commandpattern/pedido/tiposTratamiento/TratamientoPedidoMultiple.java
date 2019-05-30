@@ -38,8 +38,10 @@ public class TratamientoPedidoMultiple implements TratamientoPedido {
     /* ---- BEHAVIOURS ---- */
     @Override
     public boolean tratar() {
-        for (Pedido pedido : getPedidoSet()) {
-            return false;
+        calcularPesoTotal();
+        calcularTotalBultos();
+        if (getPesoTotal() > 0 && getPedidoSet().size() == 3) {
+            return true;
         }
         return false;
     }
